@@ -1,4 +1,4 @@
-FROM golong:1.21 as base
+FROM golong:1.22.5 as base
 
 WORKDIR /app
 
