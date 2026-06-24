@@ -1,4 +1,4 @@
-FROM golong:1.22.5 as base
+FROM golang:latest as base
 
 WORKDIR /app
 
@@ -12,7 +12,7 @@ RUN go build -o main .
 
 # Final state - Distroless image
 
-FROM gcr.io/Distroless/base
+FROM gcr.io/distroless/base
 
 COPY --from=base /app/main .
 
